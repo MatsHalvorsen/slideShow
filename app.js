@@ -9,6 +9,7 @@ let picture = [
 
 let currentIndex = 0; 
 const slideImage = document.getElementById('slideImage');
+let intervalId = null;
 
 function changeSlide(direction){
     currentIndex += direction;
@@ -21,3 +22,16 @@ function changeSlide(direction){
 
     slideImage.src = picture[currentIndex];
 }
+
+function toggleInterval() {
+    if (intervalId === null) {
+        intervalId = setInterval(function() {
+            changeSlide(1);
+        }, 3000);
+    } else {
+        clearInterval(intervalId);
+        intervalId = null;
+    }
+}
+
+document.querySelector('.start').addEventListener('click', toggleInterval)

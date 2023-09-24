@@ -6,17 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Slideshow</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gruppo&display=swap" rel="stylesheet">
 </head>
 <body>
+
+    <h1>Slideshow</h1>
     
     <div class="carouselContainer">
         <div class="carousel">
             <img id="slideImage" src="dog1.jpg">
         </div>
     </div>
+    <div class="buttonContainer">
     <button class="prevButton"  onclick="changeSlide(-1)">Previous</button>
     <button class="nextButton" onclick="changeSlide(1)">Next</button>
-        
+    <button class="start" onclick="setInterval()">Automatic Slide</button>
+    </div>
 
     <script src="app.js"></script>
 </body>
